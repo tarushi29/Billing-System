@@ -122,6 +122,29 @@ void saveBill(Bill bill) {
     file.close();
 
 }
+int main() {
+    // Create an instance of the Bill class
+    Bill bill("John Doe", "john.doe@example.com", 3);
+
+    // Create items and add them to the bill
+    Item item1("Item 1", 2, 10.0);
+    Item item2("Item 2", 3, 5.0);
+    Item item3("Item 3", 1, 20.0);
+
+    // Set items in the bill
+    bill.setItem(0, item1);
+    bill.setItem(1, item2);
+    bill.setItem(2, item3);
+
+    // Display the bill
+    displayBill(bill);
+
+    // Save the bill to a file
+    saveBill(bill);
+
+    return 0;
+}
+
 
 
 
